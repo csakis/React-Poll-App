@@ -22,8 +22,8 @@ class APP extends React.Component {
     }
 
     componentWillMount() {
-        this.socket = io('http://localhost:3000');
-        
+        this.socket = io('https://csaba-websocket.herokuapp.com');
+
         this.socket.on('connect', () => {
 
             var member = (sessionStorage.member) ? JSON.parse(sessionStorage.member) : null;
@@ -36,13 +36,13 @@ class APP extends React.Component {
 
             this.setState({ status: 'connected' });
         });
-        
+
 
         this.socket.on('disconnect', () => {
-            this.setState({ 
+            this.setState({
                 status: 'disconnected',
                 title: 'disconnected',
-                speaker: '' 
+                speaker: ''
             });
         });
 
@@ -66,19 +66,19 @@ class APP extends React.Component {
         });
 
         this.socket.on('end', x => this.setState(x));
-        
+
         this.socket.on('ask', (question) => {
             sessionStorage.answer = '';
-            this.setState({ 
+            this.setState({
                 currentQuestion: question,
-                results: {a:0,b:0,c:0,d:0} 
+                results: {a:0,b:0,c:0,d:0}
             });
         });
 
         this.socket.on('results', (data) => {
             this.setState({ results: data });
         });
-        
+
     }
 
     emit(eventName, payload) {
