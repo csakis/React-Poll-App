@@ -4,6 +4,7 @@ import io from 'socket.io-client'
 import Header from './parts/Header'
 var { RouteHandler } = Router;
 
+
 class APP extends React.Component {
 
     constructor() {
@@ -22,7 +23,7 @@ class APP extends React.Component {
     }
 
     componentWillMount() {
-        this.socket = io('localhost');
+        this.socket = io();
 
         this.socket.on('connect', () => {
 

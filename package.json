@@ -18,9 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "prestart": "webpack --progress",
+    "prestart": "webpack",
     "start": "node app-server.js"
-
   },
   "author": "Alex Banks",
   "license": "MIT"
