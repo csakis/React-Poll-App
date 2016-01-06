@@ -10,16 +10,17 @@ var Join = React.createClass({
 
 	render() {
 		return (
-			<form action="javascript:void(0)" onSubmit={this.join}>
-
-				<label>Full Name</label>
-				<input ref="name"
+			<form  action="javascript:void(0)" onSubmit={this.join}>
+				<div className="form-group">
+						<label className="h4">Name</label>
+				<input ref="name" id="Name" type="text"
 					   className="form-control"
-				       placeholder="enter your full name..."
+				       placeholder="Please enter your name"
 				       required />
-				<button className="btn btn-primary">Join</button>
-				<Link to="/speaker">Start the presentation</Link>
-				<Link to="/board">Go to the board</Link>
+				<button className="btn btn-primary ">Enter survey</button>
+				</div>
+		{/*		 <Link to="/speaker">Start the presentation</Link>
+				// <Link to="/board">Go to the board</Link> */}
 			</form>
 		);
 	}
