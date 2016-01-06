@@ -16,7 +16,7 @@ var results = {
 };
 
 app.use(express.static('./public'));
-app.use(express.static('./node_modules/bootstrap/dist'));
+app.use(express.static('./bootstrap/dist'));
 
 var server = app.listen(process.env.PORT ||3000);
 var io = require('socket.io').listen(server);
