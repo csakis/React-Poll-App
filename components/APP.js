@@ -22,7 +22,7 @@ class APP extends React.Component {
     }
 
     componentWillMount() {
-        this.socket = io('https://csaba-websocket.herokuapp.com');
+        this.socket = io();
 
         this.socket.on('connect', () => {
 
