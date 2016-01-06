@@ -91,4 +91,4 @@ io.sockets.on('connection', function (socket) {
     console.log("Connected: %s sockets connected.", connections.length);
 });
 
-console.log("Polling server is running at 'http://localhost:3000'");
+console.log("Polling server is running." );

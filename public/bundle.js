@@ -23768,7 +23768,7 @@
 	        value: function componentWillMount() {
 	            var _this = this;
 
-	            this.socket = (0, _socketIoClient2['default'])('http://localhost:3000');
+	            this.socket = (0, _socketIoClient2['default'])();
 
 	            this.socket.on('connect', function () {
 

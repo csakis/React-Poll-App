@@ -19,6 +19,7 @@ var Board = React.createClass({
 			<div id="scoreboard">
 
 				<Display if={this.props.status === 'connected' && this.props.currentQuestion}>
+					<h2>{this.props.results.length} audience members have voted.</h2>
 					<BarChart data={this.barGraphData(this.props.results)}
 							  title={this.props.currentQuestion.q}
 							  height={window.innerHeight * 0.6}
