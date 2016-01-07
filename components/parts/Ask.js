@@ -21,7 +21,7 @@ var Ask = React.createClass({
 	setUpChoices() {
 		var choices = Object.keys(this.props.question);
 		choices.shift();
-		this.setState({ 
+		this.setState({
 			choices: choices,
 			answer: sessionStorage.answer
 		});
@@ -41,7 +41,7 @@ var Ask = React.createClass({
 		var buttonTypes = ['primary', 'success', 'warning', 'danger'];
 
 		return (
-			<button key={i} 
+			<button key={i}
 			        className={"col-xs-12 col-sm-6 btn btn-" + buttonTypes[i]}
 			        onClick={this.select.bind(null, choice)}>
 				{choice}: {this.props.question[choice]}
@@ -59,7 +59,7 @@ var Ask = React.createClass({
 				</Display>
 
 				<Display if={!this.state.answer}>
-					<h2>{this.props.question.q}</h2>
+					<h4 className="strong">{this.props.question.q}</h4>
 					<div className="row">
 						{this.state.choices.map(this.addChoiceButton)}
 					</div>
