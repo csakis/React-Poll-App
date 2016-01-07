@@ -18,7 +18,9 @@ var Audience = React.createClass({
 						</Display>
 
 						<Display if={this.props.currentQuestion}>
+
 							<Ask question={this.props.currentQuestion} emit={this.props.emit} />
+							<p>{this.props.audience.length} audience members connected</p>
 						</Display>
 
 					</Display>

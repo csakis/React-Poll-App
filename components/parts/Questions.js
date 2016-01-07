@@ -1,5 +1,6 @@
 var React = require('react');
 
+
 var Questions = React.createClass({
 
 	ask(question) {
@@ -17,7 +18,7 @@ var Questions = React.createClass({
 	render() {
 		return (
 			<div id="questions" className="row">
-				<h4 style="font-weight: 600">Questions</h4>
+				<h4 className="strong">Questions</h4>
 				<p></p>
 				{this.props.questions.map(this.addQuestion)}
 			</div>
