@@ -24,7 +24,7 @@ var Audience = React.createClass({
 					</Display>
 
 					<Display if={!this.props.member.name}>
-						<h1>Join the session</h1>
+						<h3>Please join the survey</h3>
 					    <Join emit={this.props.emit} />
 					</Display>
 
