@@ -17,7 +17,8 @@ var Questions = React.createClass({
 	render() {
 		return (
 			<div id="questions" className="row">
-				<h2>Questions</h2>
+				<h4 style="font-weight: 600">Questions</h4>
+				<p></p>
 				{this.props.questions.map(this.addQuestion)}
 			</div>
 		);
