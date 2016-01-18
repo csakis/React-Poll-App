@@ -1,7 +1,6 @@
 var express = require('express');
 var _ = require('underscore');
 var app = express();
-
 var connections = [];
 var title = 'Untitled Presentation';
 var audience = [];
@@ -14,19 +13,13 @@ var results = {
 	c: 0,
 	d: 0
 };
-
 app.use(express.static('./public'));
 app.use(express.static('./bootstrap/dist'));
-
 var server = app.listen(process.env.PORT ||3000);
 var io = require('socket.io').listen(server);
-
 io.sockets.on('connection', function (socket) {
-
 	socket.once('disconnect', function() {
-
 		var member = _.findWhere(audience, { id: this.id });
-
 		if (member) {
 			audience.splice(audience.indexOf(member), 1);
 			io.sockets.emit('audience', audience);
@@ -35,9 +28,8 @@ io.sockets.on('connection', function (socket) {
 			console.log("%s has left. '%s' is over.", speaker.name, title);
 			speaker = {};
 			title = "Untitled Presentation";
-			io.sockets.emit('end', { title: title, speaker: '' });
+			io.sockets.emit('end', {title: title, speaker: ''});
 		}
-
 		connections.splice(connections.indexOf(socket), 1);
 		socket.disconnect();
 		console.log("Disconnected: %s sockets remaining.", connections.length);
@@ -61,7 +53,7 @@ io.sockets.on('connection', function (socket) {
 		speaker.type = 'speaker';
 		title = payload.title;
 		this.emit('joined', speaker);
-		io.sockets.emit('start', { title: title, speaker: speaker.name });
+		io.sockets.emit('start', {title: title, speaker: speaker.name});
 		console.log("Presentation Started: '%s' by %s", title, speaker.name);
 	});
 

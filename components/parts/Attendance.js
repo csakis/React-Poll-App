@@ -1,7 +1,5 @@
 var React = require('react');
-
 var Attendance = React.createClass({
-
 	addMemberRow(member, i) {
 		return (
 			<tr key={i}>
@@ -15,7 +13,7 @@ var Attendance = React.createClass({
 		return (
 			<div>
 				<h2>Attendance - {this.props.audience.length}</h2>
-				<table className="table table-stripped">
+				<table className="table table-striped">
 					<thead>
 						<tr>
 							<th>Audience Member</th>
@@ -23,9 +21,7 @@ var Attendance = React.createClass({
 						</tr>
 					</thead>
 					<tbody>
-
 						{this.props.audience.map(this.addMemberRow)}
-
 					</tbody>
 				</table>
 			</div>

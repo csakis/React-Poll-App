@@ -1,8 +1,5 @@
 var React = require('react');
-
-
 var Questions = React.createClass({
-
 	ask(question) {
 		this.props.emit('ask', question);
 	},

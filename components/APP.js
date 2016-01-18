@@ -4,9 +4,7 @@ import io from 'socket.io-client'
 import Header from './parts/Header'
 var { RouteHandler } = Router;
 
-
 class APP extends React.Component {
-
     constructor() {
         super();
         this.state = {
@@ -24,20 +22,15 @@ class APP extends React.Component {
 
     componentWillMount() {
         this.socket = io();
-
         this.socket.on('connect', () => {
-
             var member = (sessionStorage.member) ? JSON.parse(sessionStorage.member) : null;
-
             if (member && member.type === 'audience') {
                 this.emit('join', member);
             } else if (member && member.type === 'speaker') {
-                this.emit('start', { name: member.name, title: sessionStorage.title });
+                this.emit('start', {name: member.name, title: sessionStorage.title});
             }
-
-            this.setState({ status: 'connected' });
+            this.setState({status: 'connected'});
         });
-
 
         this.socket.on('disconnect', () => {
             this.setState({
@@ -46,10 +39,7 @@ class APP extends React.Component {
                 speaker: ''
             });
         });
-
-
         this.socket.on('welcome', x => this.setState(x));
-
         this.socket.on('joined', member => {
             sessionStorage.member = JSON.stringify(member);
             this.setState({ member: member });

@@ -23769,17 +23769,13 @@
 	            var _this = this;
 
 	            this.socket = (0, _socketIoClient2['default'])();
-
 	            this.socket.on('connect', function () {
-
 	                var member = sessionStorage.member ? JSON.parse(sessionStorage.member) : null;
-
 	                if (member && member.type === 'audience') {
 	                    _this.emit('join', member);
 	                } else if (member && member.type === 'speaker') {
 	                    _this.emit('start', { name: member.name, title: sessionStorage.title });
 	                }
-
 	                _this.setState({ status: 'connected' });
 	            });
 
@@ -23790,11 +23786,9 @@
 	                    speaker: ''
 	                });
 	            });
-
 	            this.socket.on('welcome', function (x) {
 	                return _this.setState(x);
 	            });
-
 	            this.socket.on('joined', function (member) {
 	                sessionStorage.member = JSON.stringify(member);
 	                _this.setState({ member: member });
@@ -31522,10 +31516,17 @@
 							this.props.title
 						),
 						_react2["default"].createElement(
-							"p",
+							"h2",
 							null,
 							this.props.speaker
-						)
+						),
+						_react2["default"].createElement(
+							"p",
+							null,
+							this.props.audience.length,
+							" audience members connected"
+						),
+						_react2["default"].createElement("br", null)
 					),
 					_react2["default"].createElement(
 						"div",
@@ -31559,7 +31560,6 @@
 	var Display = __webpack_require__(250);
 	var Join = __webpack_require__(251);
 	var Ask = __webpack_require__(252);
-
 	var Audience = React.createClass({
 		displayName: 'Audience',
 
@@ -31577,16 +31577,10 @@
 							Display,
 							{ 'if': !this.props.currentQuestion },
 							React.createElement(
-								'h2',
+								'h3',
 								null,
 								'Welcome ',
 								this.props.member.name
-							),
-							React.createElement(
-								'p',
-								null,
-								this.props.audience.length,
-								' audience members connected'
 							),
 							React.createElement(
 								'p',
@@ -31604,9 +31598,9 @@
 						Display,
 						{ 'if': !this.props.member.name },
 						React.createElement(
-							'h1',
+							'h3',
 							null,
-							'Join the session'
+							'Please join the survey'
 						),
 						React.createElement(Join, { emit: this.props.emit })
 					)
@@ -31695,7 +31689,9 @@
 
 	var React = __webpack_require__(1);
 	var Display = __webpack_require__(250);
-
+	var questionStyle = {
+		'font-weight': 'bold'
+	};
 	var Ask = React.createClass({
 		displayName: 'Ask',
 
@@ -31733,9 +31729,7 @@
 		},
 
 		addChoiceButton: function addChoiceButton(choice, i) {
-
 			var buttonTypes = ['primary', 'success', 'warning', 'danger'];
-
 			return React.createElement(
 				'button',
 				{ key: i,
@@ -31752,28 +31746,24 @@
 				'div',
 				{ id: 'currentQuestion' },
 				React.createElement(
+					'h4',
+					{ style: questionStyle },
+					this.props.question.q
+				),
+				React.createElement(
 					Display,
 					{ 'if': this.state.answer },
 					React.createElement(
-						'h3',
+						'h4',
 						null,
 						'You answered: ',
-						this.state.answer
-					),
-					React.createElement(
-						'p',
-						null,
 						this.props.question[this.state.answer]
-					)
+					),
+					React.createElement('p', null)
 				),
 				React.createElement(
 					Display,
 					{ 'if': !this.state.answer },
-					React.createElement(
-						'h2',
-						null,
-						this.props.question.q
-					),
 					React.createElement(
 						'div',
 						{ className: 'row' },
@@ -31782,7 +31772,6 @@
 				)
 			);
 		}
-
 	});
 
 	module.exports = Ask;
@@ -31874,7 +31863,6 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-
 	var JoinSpeaker = React.createClass({
 		displayName: 'JoinSpeaker',
 
@@ -31883,7 +31871,6 @@
 			var title = React.findDOMNode(this.refs.title).value;
 			this.props.emit('start', { name: speakerName, title: title });
 		},
-
 		render: function render() {
 			return React.createElement(
 				'form',
@@ -31913,7 +31900,6 @@
 				)
 			);
 		}
-
 	});
 
 	module.exports = JoinSpeaker;
@@ -31925,7 +31911,6 @@
 	"use strict";
 
 	var React = __webpack_require__(1);
-
 	var Attendance = React.createClass({
 		displayName: "Attendance",
 
@@ -31958,7 +31943,7 @@
 				),
 				React.createElement(
 					"table",
-					{ className: "table table-stripped" },
+					{ className: "table table-striped" },
 					React.createElement(
 						"thead",
 						null,
@@ -31996,7 +31981,6 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-
 	var Questions = React.createClass({
 		displayName: 'Questions',
 
@@ -32021,10 +32005,11 @@
 				'div',
 				{ id: 'questions', className: 'row' },
 				React.createElement(
-					'h2',
+					'h4',
 					null,
 					'Questions'
 				),
+				React.createElement('p', null),
 				this.props.questions.map(this.addQuestion)
 			);
 		}
@@ -32041,7 +32026,6 @@
 	var React = __webpack_require__(1);
 	var Display = __webpack_require__(250);
 	var BarChart = __webpack_require__(258).BarChart;
-
 	var Board = React.createClass({
 		displayName: 'Board',
 
@@ -50751,7 +50735,6 @@
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(157);
 	var Link = Router.Link;
-
 	var Whoops404 = React.createClass({
 		displayName: 'Whoops404',
 
@@ -50773,11 +50756,6 @@
 					Link,
 					{ to: '/' },
 					'Join as Audience'
-				),
-				React.createElement(
-					Link,
-					{ to: '/speaker' },
-					'Start the presentation'
 				),
 				React.createElement(
 					Link,

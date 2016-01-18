@@ -1,6 +1,8 @@
 var React = require('react');
 var Display = require('./Display');
-
+var questionStyle = {
+	'font-weight': 'bold'
+};
 var Ask = React.createClass({
 
 	getInitialState() {
@@ -28,7 +30,7 @@ var Ask = React.createClass({
 	},
 
 	select(choice) {
-		this.setState({ answer: choice });
+		this.setState({answer: choice});
 		sessionStorage.answer = choice;
 		this.props.emit('answer', {
 			question: this.props.question,
@@ -37,9 +39,7 @@ var Ask = React.createClass({
 	},
 
 	addChoiceButton(choice, i) {
-
 		var buttonTypes = ['primary', 'success', 'warning', 'danger'];
-
 		return (
 			<button key={i}
 			        className={"col-xs-12 col-sm-6 btn btn-" + buttonTypes[i]}
@@ -49,26 +49,23 @@ var Ask = React.createClass({
 		);
 	},
 
+
 	render() {
 		return (
 			<div id="currentQuestion">
-
+				<h4 style={questionStyle}>{this.props.question.q}</h4>
 				<Display if={this.state.answer}>
-					<h3>You answered: {this.state.answer}</h3>
-					<p>{this.props.question[this.state.answer]}</p>
+					<h4>You answered: {this.props.question[this.state.answer]}</h4>
+					<p></p>
 				</Display>
-
 				<Display if={!this.state.answer}>
-					<h4 className="strong">{this.props.question.q}</h4>
 					<div className="row">
 						{this.state.choices.map(this.addChoiceButton)}
 					</div>
 				</Display>
-
 			</div>
 		);
 	}
-
 });
 
 module.exports = Ask;
