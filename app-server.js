@@ -7,12 +7,7 @@ var audience = [];
 var speaker = {};
 var questions = require('./app-questions');
 var currentQuestion = false;
-var results = {
-	a: 0,
-	b: 0,
-	c: 0,
-	d: 0
-};
+var results = {};
 app.use(express.static('./public'));
 app.use(express.static('./bootstrap/dist'));
 var server = app.listen(process.env.PORT ||3000);
@@ -59,13 +54,18 @@ io.sockets.on('connection', function (socket) {
 
 	socket.on('ask', function(question) {
 		currentQuestion = question;
-		results = {a:0, b:0, c:0, d:0};
+		results = {};
 		io.sockets.emit('ask', currentQuestion);
 		console.log("Question Asked: '%s'", question.q);
 	});
 
 	socket.on('answer', function(payload) {
-		results[payload.choice]++;
+		if (results[payload.choice] === undefined ||results[payload.choice] === null) {
+			results[payload.choice] =1;
+		}
+		else {
+			results[payload.choice]++;
+		}
 		io.sockets.emit('results', results);
 		console.log("Answer: '%s' - %j", payload.choice, results);
 	});

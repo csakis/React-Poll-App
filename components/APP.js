@@ -62,7 +62,7 @@ class APP extends React.Component {
             sessionStorage.answer = '';
             this.setState({
                 currentQuestion: question,
-                results: {a:0,b:0,c:0,d:0}
+                results: {}
             });
         });
 
