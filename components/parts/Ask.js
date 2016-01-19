@@ -1,8 +1,9 @@
 var React = require('react');
 var Display = require('./Display');
-var questionStyle = {
+
+/*var questionStyle = {
 	'font-weight': 'bold'
-};
+};*/
 var Ask = React.createClass({
 
 	getInitialState() {
@@ -18,6 +19,10 @@ var Ask = React.createClass({
 
 	componentWillReceiveProps() {
 		this.setUpChoices();
+	},
+
+	shouldComponentUpdate: function(nextProps, nextState){
+		return this.props.question !== nextProps.value;
 	},
 
 	setUpChoices() {
@@ -44,7 +49,7 @@ var Ask = React.createClass({
 			<button key={i}
 			        className={"col-xs-12 col-sm-6 btn btn-" + buttonTypes[i]}
 			        onClick={this.select.bind(null, choice)}>
-				{choice}: {this.props.question[choice]}
+				{this.props.question[choice]}
 			</button>
 		);
 	},
@@ -53,10 +58,9 @@ var Ask = React.createClass({
 	render() {
 		return (
 			<div id="currentQuestion">
-				<h4 style={questionStyle}>{this.props.question.q}</h4>
+				<h4>{this.props.question.q}</h4>
 				<Display if={this.state.answer}>
 					<h4>You answered: {this.props.question[this.state.answer]}</h4>
-					<p></p>
 				</Display>
 				<Display if={!this.state.answer}>
 					<div className="row">

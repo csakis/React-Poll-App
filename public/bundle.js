@@ -31514,24 +31514,31 @@
 							"h1",
 							null,
 							this.props.title
-						),
-						_react2["default"].createElement(
-							"h2",
-							null,
-							this.props.speaker
-						),
-						_react2["default"].createElement(
-							"p",
-							null,
-							this.props.audience.length,
-							" audience members connected"
-						),
-						_react2["default"].createElement("br", null)
+						)
 					),
 					_react2["default"].createElement(
 						"div",
 						{ className: "col-xs-2" },
-						_react2["default"].createElement("span", { id: "connection-status", className: this.props.status })
+						_react2["default"].createElement("span", { id: "connection-status", className: this.props.status + " pull-right" })
+					),
+					_react2["default"].createElement(
+						"div",
+						{ className: "col-xs-6" },
+						_react2["default"].createElement(
+							"h2",
+							null,
+							this.props.speaker
+						)
+					),
+					_react2["default"].createElement(
+						"div",
+						{ className: "col-xs-6" },
+						_react2["default"].createElement(
+							"h4",
+							{ className: "pull-right" },
+							this.props.audience.length,
+							" audience members connected"
+						)
 					)
 				);
 			}
@@ -31689,9 +31696,10 @@
 
 	var React = __webpack_require__(1);
 	var Display = __webpack_require__(250);
-	var questionStyle = {
+
+	/*var questionStyle = {
 		'font-weight': 'bold'
-	};
+	};*/
 	var Ask = React.createClass({
 		displayName: 'Ask',
 
@@ -31708,6 +31716,10 @@
 
 		componentWillReceiveProps: function componentWillReceiveProps() {
 			this.setUpChoices();
+		},
+
+		shouldComponentUpdate: function shouldComponentUpdate(nextProps, nextState) {
+			return this.props.question !== nextProps.value;
 		},
 
 		setUpChoices: function setUpChoices() {
@@ -31735,8 +31747,6 @@
 				{ key: i,
 					className: "col-xs-12 col-sm-6 btn btn-" + buttonTypes[i],
 					onClick: this.select.bind(null, choice) },
-				choice,
-				': ',
 				this.props.question[choice]
 			);
 		},
@@ -31747,7 +31757,7 @@
 				{ id: 'currentQuestion' },
 				React.createElement(
 					'h4',
-					{ style: questionStyle },
+					null,
 					this.props.question.q
 				),
 				React.createElement(
@@ -31758,8 +31768,7 @@
 						null,
 						'You answered: ',
 						this.props.question[this.state.answer]
-					),
-					React.createElement('p', null)
+					)
 				),
 				React.createElement(
 					Display,
