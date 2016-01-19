@@ -10,7 +10,8 @@ module.exports = [
       "q": "I develop mainly",
       "Notes": "Notes applications",
       "XPages": "XPage applications",
-      "Web": "other web applications"
+      "Web": "other web applications",
+      "Other": "something completely different"
 
   },
     {
