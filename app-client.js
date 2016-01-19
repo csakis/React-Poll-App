@@ -5,6 +5,7 @@ import Audience from './components/Audience'
 import Speaker from './components/Speaker'
 import Board from './components/Board'
 import Whoops404 from './components/Whoops404'
+import ReactDOM from 'react-dom';
 var { Route, DefaultRoute, NotFoundRoute } = Router;
 
 var routes = (
@@ -17,5 +18,5 @@ var routes = (
 );
 
 Router.run(routes, function(Handler) {
-	React.render(<Handler />, document.getElementById('react-container'));
+	ReactDOM.render(<Handler />, document.getElementById('react-container'));
 });
