@@ -4,26 +4,26 @@ var Display = require('./Display');
 /*var questionStyle = {
 	'font-weight': 'bold'
 };*/
-var Ask = React.createClass({
-
-	getInitialState() {
-		return {
+class Ask extends React.Component{
+	constructor() {
+	super();
+	this.state ={
 			choices: [],
 			answer: undefined
 		};
-	},
+		this.setUpChoices = this.setUpChoices.bind(this);
+		this.select = this.select.bind(this);
+		this.addChoiceButton = this.addChoiceButton.bind(this);
+	}
+
 
 	componentWillMount() {
 		this.setUpChoices();
-	},
+	}
 
 	componentWillReceiveProps() {
 		this.setUpChoices();
-	},
-
-	shouldComponentUpdate: function(nextProps, nextState){
-		return this.props.question !== nextProps.value;
-	},
+	}
 
 	setUpChoices() {
 		var choices = Object.keys(this.props.question);
@@ -32,7 +32,7 @@ var Ask = React.createClass({
 			choices: choices,
 			answer: sessionStorage.answer
 		});
-	},
+	}
 
 	select(choice) {
 		this.setState({answer: choice});
@@ -41,7 +41,7 @@ var Ask = React.createClass({
 			question: this.props.question,
 			choice: choice
 		});
-	},
+	}
 
 	addChoiceButton(choice, i) {
 		var buttonTypes = ['primary', 'success', 'warning', 'danger'];
@@ -52,8 +52,8 @@ var Ask = React.createClass({
 				{this.props.question[choice]}
 			</button>
 		);
-	},
 
+	}
 
 	render() {
 		return (
@@ -70,6 +70,6 @@ var Ask = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
 module.exports = Ask;
