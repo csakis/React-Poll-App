@@ -54,14 +54,22 @@ io.sockets.on('connection', function (socket) {
 
 	socket.on('ask', function(question) {
 		currentQuestion = question;
-		results = {};
+		results={};
+		Object.keys(question).forEach(function(key){
+			console.log("key", key, "value", question[key]);
+			if (key !=="q")	{
+				results[key] = 0;
+			}
+		});
+
+
 		io.sockets.emit('ask', currentQuestion);
 		console.log("Question Asked: '%s'", question.q);
 	});
 
 	socket.on('answer', function(payload) {
 		if (results[payload.choice] === undefined ||results[payload.choice] === null) {
-			results[payload.choice] =1;
+			results[payload.choice] = 1;
 		}
 		else {
 			results[payload.choice]++;

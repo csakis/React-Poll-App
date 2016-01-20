@@ -1,5 +1,6 @@
 var React = require('react');
 var Display = require('./Display');
+var d3= require('d3');
 
 /*var questionStyle = {
 	'font-weight': 'bold'
@@ -44,10 +45,10 @@ class Ask extends React.Component{
 	}
 
 	addChoiceButton(choice, i) {
-		var buttonTypes = ['primary', 'success', 'warning', 'danger'];
+		var buttonTypes = ['firstStyle', 'secondStyle', 'thirdStyle', 'fourthStyle', 'fifhtStyle'];
 		return (
 			<button key={i}
-			        className={"col-xs-12 col-sm-6 btn btn-" + buttonTypes[i]}
+			        className={"col-xs-12 col-sm-6 btn " + buttonTypes[i]}
 			        onClick={this.select.bind(null, choice)}>
 				{this.props.question[choice]}
 			</button>
@@ -58,7 +59,7 @@ class Ask extends React.Component{
 	render() {
 		return (
 			<div id="currentQuestion">
-				<h4>{this.props.question.q}</h4>
+				<h4 className="boldTitle">{this.props.question.q}</h4>
 				<Display if={this.state.answer}>
 					<h4>You answered: {this.props.question[this.state.answer]}</h4>
 				</Display>

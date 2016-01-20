@@ -60,9 +60,16 @@ class APP extends React.Component {
 
         this.socket.on('ask', (question) => {
             sessionStorage.answer = '';
+            var resetResults = {};
+            Object.keys(question).forEach(function(key){
+              console.log("key", key, "value", question[key]);
+              if (key !=="q")	{
+                resetResults[key] = 0;
+              }
+            });
             this.setState({
                 currentQuestion: question,
-                results: {}
+                results: resetResults
             });
         });
 

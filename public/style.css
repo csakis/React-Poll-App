@@ -66,3 +66,22 @@ form a {
     opacity: 0.9;
 }
 
+.firstStyle {
+  background-color: #1f77b4;
+}
+.secondStyle {
+  background-color: #ff7f0e;
+}
+.thirdStyle {
+  background-color: #2ca02c;
+}
+.fourthStyle {
+  background-color: #d62728;
+}
+.fifhtStyle {
+  background-color: #9467bd;
+}
+
+.boldTitle {
+  font-weight:600
+}
