@@ -45,10 +45,10 @@ class Ask extends React.Component{
 	}
 
 	addChoiceButton(choice, i) {
-		var buttonTypes = ['firstStyle', 'secondStyle', 'thirdStyle', 'fourthStyle', 'fifhtStyle'];
+		var buttonTypes = ['firstStyle', 'secondStyle', 'thirdStyle', 'fourthStyle', 'fifhtStyle', 'sixthStyle', 'seventhtStyle', 'eigthStyle', 'ninthStyle', 'tenthStyle'];
 		return (
 			<button key={i}
-			        className={"col-xs-12 col-sm-6 btn " + buttonTypes[i]}
+			        className={"col-xs-12 col-sm-6 btn " + buttonTypes[i % 10]}
 			        onClick={this.select.bind(null, choice)}>
 				{this.props.question[choice]}
 			</button>

@@ -64,6 +64,7 @@ io.sockets.on('connection', function (socket) {
 
 
 		io.sockets.emit('ask', currentQuestion);
+		io.sockets.emit('ask', currentQuestion);
 		console.log("Question Asked: '%s'", question.q);
 	});
 
