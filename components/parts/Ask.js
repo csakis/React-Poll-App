@@ -1,10 +1,6 @@
 var React = require('react');
 var Display = require('./Display');
-var d3= require('d3');
 
-/*var questionStyle = {
-	'font-weight': 'bold'
-};*/
 class Ask extends React.Component{
 	constructor() {
 	super();
@@ -16,7 +12,6 @@ class Ask extends React.Component{
 		this.select = this.select.bind(this);
 		this.addChoiceButton = this.addChoiceButton.bind(this);
 	}
-
 
 	componentWillMount() {
 		this.setUpChoices();
@@ -53,7 +48,6 @@ class Ask extends React.Component{
 				{this.props.question[choice]}
 			</button>
 		);
-
 	}
 
 	render() {
@@ -62,6 +56,7 @@ class Ask extends React.Component{
 				<h4 className="boldTitle">{this.props.question.q}</h4>
 				<Display if={this.state.answer}>
 					<h4>You answered: {this.props.question[this.state.answer]}</h4>
+					<a target="_blank" href="../#/board">View the Results here</a>
 				</Display>
 				<Display if={!this.state.answer}>
 					<div className="row">
