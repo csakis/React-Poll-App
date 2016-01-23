@@ -60,23 +60,23 @@
 
 	var _componentsAPP2 = _interopRequireDefault(_componentsAPP);
 
-	var _componentsAudience = __webpack_require__(252);
+	var _componentsAudience = __webpack_require__(250);
 
 	var _componentsAudience2 = _interopRequireDefault(_componentsAudience);
 
-	var _componentsSpeaker = __webpack_require__(256);
+	var _componentsSpeaker = __webpack_require__(254);
 
 	var _componentsSpeaker2 = _interopRequireDefault(_componentsSpeaker);
 
-	var _componentsBoard = __webpack_require__(260);
+	var _componentsBoard = __webpack_require__(258);
 
 	var _componentsBoard2 = _interopRequireDefault(_componentsBoard);
 
-	var _componentsWhoops404 = __webpack_require__(284);
+	var _componentsWhoops404 = __webpack_require__(282);
 
 	var _componentsWhoops4042 = _interopRequireDefault(_componentsWhoops404);
 
-	var _reactDom = __webpack_require__(275);
+	var _reactDom = __webpack_require__(273);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -22951,7 +22951,7 @@
 
 	var _socketIoClient2 = _interopRequireDefault(_socketIoClient);
 
-	var _partsHeader = __webpack_require__(251);
+	var _partsHeader = __webpack_require__(249);
 
 	var _partsHeader2 = _interopRequireDefault(_partsHeader);
 
@@ -23159,7 +23159,7 @@
 	 */
 
 	exports.Manager = __webpack_require__(215);
-	exports.Socket = __webpack_require__(243);
+	exports.Socket = __webpack_require__(242);
 
 
 /***/ },
@@ -25494,14 +25494,14 @@
 	 */
 
 	var eio = __webpack_require__(216);
-	var Socket = __webpack_require__(243);
-	var Emitter = __webpack_require__(244);
+	var Socket = __webpack_require__(242);
+	var Emitter = __webpack_require__(243);
 	var parser = __webpack_require__(207);
-	var on = __webpack_require__(246);
-	var bind = __webpack_require__(247);
+	var on = __webpack_require__(245);
+	var bind = __webpack_require__(246);
 	var debug = __webpack_require__(204)('socket.io-client:manager');
-	var indexOf = __webpack_require__(241);
-	var Backoff = __webpack_require__(250);
+	var indexOf = __webpack_require__(240);
+	var Backoff = __webpack_require__(248);
 
 	/**
 	 * IE6+ hasOwnProperty
@@ -26080,13 +26080,13 @@
 	 */
 
 	var transports = __webpack_require__(219);
-	var Emitter = __webpack_require__(234);
+	var Emitter = __webpack_require__(233);
 	var debug = __webpack_require__(204)('engine.io-client:socket');
-	var index = __webpack_require__(241);
+	var index = __webpack_require__(240);
 	var parser = __webpack_require__(225);
 	var parseuri = __webpack_require__(203);
-	var parsejson = __webpack_require__(242);
-	var parseqs = __webpack_require__(235);
+	var parsejson = __webpack_require__(241);
+	var parseqs = __webpack_require__(234);
 
 	/**
 	 * Module exports.
@@ -26816,8 +26816,8 @@
 
 	var XMLHttpRequest = __webpack_require__(220);
 	var XHR = __webpack_require__(222);
-	var JSONP = __webpack_require__(238);
-	var websocket = __webpack_require__(239);
+	var JSONP = __webpack_require__(237);
+	var websocket = __webpack_require__(238);
 
 	/**
 	 * Export transports.
@@ -26941,8 +26941,8 @@
 
 	var XMLHttpRequest = __webpack_require__(220);
 	var Polling = __webpack_require__(223);
-	var Emitter = __webpack_require__(234);
-	var inherit = __webpack_require__(236);
+	var Emitter = __webpack_require__(233);
+	var inherit = __webpack_require__(235);
 	var debug = __webpack_require__(204)('engine.io-client:polling-xhr');
 
 	/**
@@ -27359,10 +27359,10 @@
 	 */
 
 	var Transport = __webpack_require__(224);
-	var parseqs = __webpack_require__(235);
+	var parseqs = __webpack_require__(234);
 	var parser = __webpack_require__(225);
-	var inherit = __webpack_require__(236);
-	var yeast = __webpack_require__(237);
+	var inherit = __webpack_require__(235);
+	var yeast = __webpack_require__(236);
 	var debug = __webpack_require__(204)('engine.io-client:polling');
 
 	/**
@@ -27612,7 +27612,7 @@
 	 */
 
 	var parser = __webpack_require__(225);
-	var Emitter = __webpack_require__(234);
+	var Emitter = __webpack_require__(233);
 
 	/**
 	 * Module exports.
@@ -27774,10 +27774,10 @@
 
 	var keys = __webpack_require__(226);
 	var hasBinary = __webpack_require__(227);
-	var sliceBuffer = __webpack_require__(229);
-	var base64encoder = __webpack_require__(230);
-	var after = __webpack_require__(231);
-	var utf8 = __webpack_require__(232);
+	var sliceBuffer = __webpack_require__(228);
+	var base64encoder = __webpack_require__(229);
+	var after = __webpack_require__(230);
+	var utf8 = __webpack_require__(231);
 
 	/**
 	 * Check if we are running an android browser. That requires us to use
@@ -27834,7 +27834,7 @@
 	 * Create a blob api even for blob builder when vendor prefixes exist
 	 */
 
-	var Blob = __webpack_require__(233);
+	var Blob = __webpack_require__(232);
 
 	/**
 	 * Encodes a packet.
@@ -28399,7 +28399,7 @@
 	 * Module requirements.
 	 */
 
-	var isArray = __webpack_require__(228);
+	var isArray = __webpack_require__(211);
 
 	/**
 	 * Module exports.
@@ -28459,15 +28459,6 @@
 /* 228 */
 /***/ function(module, exports) {
 
-	module.exports = Array.isArray || function (arr) {
-	  return Object.prototype.toString.call(arr) == '[object Array]';
-	};
-
-
-/***/ },
-/* 229 */
-/***/ function(module, exports) {
-
 	/**
 	 * An abstraction for slicing an arraybuffer even when
 	 * ArrayBuffer.prototype.slice is not supported
@@ -28500,7 +28491,7 @@
 
 
 /***/ },
-/* 230 */
+/* 229 */
 /***/ function(module, exports) {
 
 	/*
@@ -28565,7 +28556,7 @@
 
 
 /***/ },
-/* 231 */
+/* 230 */
 /***/ function(module, exports) {
 
 	module.exports = after
@@ -28599,7 +28590,7 @@
 
 
 /***/ },
-/* 232 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/*! https://mths.be/utf8js v2.0.0 by @mathias */
@@ -28848,7 +28839,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(209)(module), (function() { return this; }())))
 
 /***/ },
-/* 233 */
+/* 232 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -28951,7 +28942,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 234 */
+/* 233 */
 /***/ function(module, exports) {
 
 	
@@ -29121,7 +29112,7 @@
 
 
 /***/ },
-/* 235 */
+/* 234 */
 /***/ function(module, exports) {
 
 	/**
@@ -29164,7 +29155,7 @@
 
 
 /***/ },
-/* 236 */
+/* 235 */
 /***/ function(module, exports) {
 
 	
@@ -29176,7 +29167,7 @@
 	};
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29250,7 +29241,7 @@
 
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {
@@ -29259,7 +29250,7 @@
 	 */
 
 	var Polling = __webpack_require__(223);
-	var inherit = __webpack_require__(236);
+	var inherit = __webpack_require__(235);
 
 	/**
 	 * Module exports.
@@ -29387,12 +29378,7 @@
 	  };
 
 	  var insertAt = document.getElementsByTagName('script')[0];
-	  if (insertAt) {
-	    insertAt.parentNode.insertBefore(script, insertAt);
-	  }
-	  else {
-	    (document.head || document.body).appendChild(script);
-	  }
+	  insertAt.parentNode.insertBefore(script, insertAt);
 	  this.script = script;
 
 	  var isUAgecko = 'undefined' != typeof navigator && /gecko/i.test(navigator.userAgent);
@@ -29495,7 +29481,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -29504,19 +29490,18 @@
 
 	var Transport = __webpack_require__(224);
 	var parser = __webpack_require__(225);
-	var parseqs = __webpack_require__(235);
-	var inherit = __webpack_require__(236);
-	var yeast = __webpack_require__(237);
+	var parseqs = __webpack_require__(234);
+	var inherit = __webpack_require__(235);
+	var yeast = __webpack_require__(236);
 	var debug = __webpack_require__(204)('engine.io-client:websocket');
-	var BrowserWebSocket = global.WebSocket || global.MozWebSocket;
 
 	/**
-	 * Get either the `WebSocket` or `MozWebSocket` globals
-	 * in the browser or the WebSocket-compatible interface
-	 * exposed by `ws` for Node environment.
+	 * `ws` exposes a WebSocket-compatible interface in
+	 * Node, or the `WebSocket` or `MozWebSocket` globals
+	 * in the browser.
 	 */
 
-	var WebSocket = BrowserWebSocket || (typeof window !== 'undefined' ? null : __webpack_require__(240));
+	var WebSocket = __webpack_require__(239);
 
 	/**
 	 * Module exports.
@@ -29592,7 +29577,7 @@
 	    opts.headers = this.extraHeaders;
 	  }
 
-	  this.ws = BrowserWebSocket ? new WebSocket(uri) : new WebSocket(uri, protocols, opts);
+	  this.ws = new WebSocket(uri, protocols, opts);
 
 	  if (this.ws.binaryType === undefined) {
 	    this.supportsBinary = false;
@@ -29659,13 +29644,15 @@
 	  var self = this;
 	  this.writable = false;
 
+	  var isBrowserWebSocket = global.WebSocket && this.ws instanceof global.WebSocket;
+
 	  // encodePacket efficient as it uses WS framing
 	  // no need for encodePayload
 	  var total = packets.length;
 	  for (var i = 0, l = total; i < l; i++) {
 	    (function(packet) {
 	      parser.encodePacket(packet, self.supportsBinary, function(data) {
-	        if (!BrowserWebSocket) {
+	        if (!isBrowserWebSocket) {
 	          // always create a new object (GH-437)
 	          var opts = {};
 	          if (packet.options) {
@@ -29684,7 +29671,7 @@
 	        //have a chance of informing us about it yet, in that case send will
 	        //throw an error
 	        try {
-	          if (BrowserWebSocket) {
+	          if (isBrowserWebSocket) {
 	            // TypeError is thrown when passing the second argument on Safari
 	            self.ws.send(data);
 	          } else {
@@ -29785,13 +29772,56 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports) {
 
-	/* (ignored) */
+	
+	/**
+	 * Module dependencies.
+	 */
+
+	var global = (function() { return this; })();
+
+	/**
+	 * WebSocket constructor.
+	 */
+
+	var WebSocket = global.WebSocket || global.MozWebSocket;
+
+	/**
+	 * Module exports.
+	 */
+
+	module.exports = WebSocket ? ws : null;
+
+	/**
+	 * WebSocket constructor.
+	 *
+	 * The third `opts` options object gets ignored in web browsers, since it's
+	 * non-standard, and throws a TypeError if passed to the constructor.
+	 * See: https://github.com/einaros/ws/issues/227
+	 *
+	 * @param {String} uri
+	 * @param {Array} protocols (optional)
+	 * @param {Object) opts (optional)
+	 * @api public
+	 */
+
+	function ws(uri, protocols, opts) {
+	  var instance;
+	  if (protocols) {
+	    instance = new WebSocket(uri, protocols);
+	  } else {
+	    instance = new WebSocket(uri);
+	  }
+	  return instance;
+	}
+
+	if (WebSocket) ws.prototype = WebSocket.prototype;
+
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports) {
 
 	
@@ -29806,7 +29836,7 @@
 	};
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -29844,7 +29874,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -29853,12 +29883,12 @@
 	 */
 
 	var parser = __webpack_require__(207);
-	var Emitter = __webpack_require__(244);
-	var toArray = __webpack_require__(245);
-	var on = __webpack_require__(246);
-	var bind = __webpack_require__(247);
+	var Emitter = __webpack_require__(243);
+	var toArray = __webpack_require__(244);
+	var on = __webpack_require__(245);
+	var bind = __webpack_require__(246);
 	var debug = __webpack_require__(204)('socket.io-client:socket');
-	var hasBin = __webpack_require__(248);
+	var hasBin = __webpack_require__(247);
 
 	/**
 	 * Module exports.
@@ -30262,7 +30292,7 @@
 
 
 /***/ },
-/* 244 */
+/* 243 */
 /***/ function(module, exports) {
 
 	
@@ -30429,7 +30459,7 @@
 
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports) {
 
 	module.exports = toArray
@@ -30448,7 +30478,7 @@
 
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports) {
 
 	
@@ -30478,7 +30508,7 @@
 
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports) {
 
 	/**
@@ -30507,7 +30537,7 @@
 
 
 /***/ },
-/* 248 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {
@@ -30515,7 +30545,7 @@
 	 * Module requirements.
 	 */
 
-	var isArray = __webpack_require__(249);
+	var isArray = __webpack_require__(211);
 
 	/**
 	 * Module exports.
@@ -30573,16 +30603,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 249 */
-/***/ function(module, exports) {
-
-	module.exports = Array.isArray || function (arr) {
-	  return Object.prototype.toString.call(arr) == '[object Array]';
-	};
-
-
-/***/ },
-/* 250 */
+/* 248 */
 /***/ function(module, exports) {
 
 	
@@ -30673,7 +30694,7 @@
 
 
 /***/ },
-/* 251 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30711,7 +30732,7 @@
 						"div",
 						{ className: "col-xs-10" },
 						_react2["default"].createElement(
-							"h1",
+							"h2",
 							null,
 							this.props.title
 						)
@@ -30725,9 +30746,14 @@
 						"div",
 						{ className: "col-xs-6" },
 						_react2["default"].createElement(
-							"h2",
+							"h3",
 							null,
-							this.props.speaker
+							"by ",
+							_react2["default"].createElement(
+								"span",
+								{ className: "semiBoldTitle" },
+								this.props.speaker
+							)
 						)
 					),
 					_react2["default"].createElement(
@@ -30758,15 +30784,15 @@
 	module.exports = Header;
 
 /***/ },
-/* 252 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Display = __webpack_require__(253);
-	var Join = __webpack_require__(254);
-	var Ask = __webpack_require__(255);
+	var Display = __webpack_require__(251);
+	var Join = __webpack_require__(252);
+	var Ask = __webpack_require__(253);
 	var Audience = React.createClass({
 		displayName: 'Audience',
 
@@ -30819,7 +30845,7 @@
 	module.exports = Audience;
 
 /***/ },
-/* 253 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30841,7 +30867,7 @@
 	module.exports = Display;
 
 /***/ },
-/* 254 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30889,7 +30915,7 @@
 		// <Link to="/board">Go to the board</Link> */
 
 /***/ },
-/* 255 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30903,7 +30929,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var React = __webpack_require__(1);
-	var Display = __webpack_require__(253);
+	var Display = __webpack_require__(251);
 
 	var Ask = (function (_React$Component) {
 		_inherits(Ask, _React$Component);
@@ -31008,7 +31034,7 @@
 	module.exports = Ask;
 
 /***/ },
-/* 256 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31027,19 +31053,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _partsDisplay = __webpack_require__(253);
+	var _partsDisplay = __webpack_require__(251);
 
 	var _partsDisplay2 = _interopRequireDefault(_partsDisplay);
 
-	var _partsJoinSpeaker = __webpack_require__(257);
+	var _partsJoinSpeaker = __webpack_require__(255);
 
 	var _partsJoinSpeaker2 = _interopRequireDefault(_partsJoinSpeaker);
 
-	var _partsAttendance = __webpack_require__(258);
+	var _partsAttendance = __webpack_require__(256);
 
 	var _partsAttendance2 = _interopRequireDefault(_partsAttendance);
 
-	var _partsQuestions = __webpack_require__(259);
+	var _partsQuestions = __webpack_require__(257);
 
 	var _partsQuestions2 = _interopRequireDefault(_partsQuestions);
 
@@ -31088,7 +31114,7 @@
 	module.exports = Speaker;
 
 /***/ },
-/* 257 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31136,7 +31162,7 @@
 	module.exports = JoinSpeaker;
 
 /***/ },
-/* 258 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31167,7 +31193,7 @@
 				"div",
 				null,
 				React.createElement(
-					"h2",
+					"h4",
 					null,
 					"Attendance - ",
 					this.props.audience.length
@@ -31206,7 +31232,7 @@
 	module.exports = Attendance;
 
 /***/ },
-/* 259 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31249,15 +31275,15 @@
 	module.exports = Questions;
 
 /***/ },
-/* 260 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Display = __webpack_require__(253);
-	var d3 = __webpack_require__(261);
-	var BarChart = __webpack_require__(262).BarChart;
+	var Display = __webpack_require__(251);
+	var d3 = __webpack_require__(259);
+	var BarChart = __webpack_require__(260).BarChart;
 	var Board = React.createClass({
 		displayName: 'Board',
 
@@ -31307,12 +31333,12 @@
 	module.exports = Board;
 
 /***/ },
-/* 261 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
 	  var d3 = {
-	    version: "3.5.13"
+	    version: "3.5.12"
 	  };
 	  var d3_arraySlice = [].slice, d3_array = function(list) {
 	    return d3_arraySlice.call(list);
@@ -40865,19 +40891,19 @@
 	}();
 
 /***/ },
-/* 262 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	var BarChart = __webpack_require__(263);
-	var Waveform = __webpack_require__(276);
-	var PieChart = __webpack_require__(277);
-	var ScatterPlot = __webpack_require__(279);
-	var LineChart = __webpack_require__(280);
-	var AreaChart = __webpack_require__(282);
-	var Brush = __webpack_require__(283);
-	var d3 = __webpack_require__(261);
+	var BarChart = __webpack_require__(261);
+	var Waveform = __webpack_require__(274);
+	var PieChart = __webpack_require__(275);
+	var ScatterPlot = __webpack_require__(277);
+	var LineChart = __webpack_require__(278);
+	var AreaChart = __webpack_require__(280);
+	var Brush = __webpack_require__(281);
+	var d3 = __webpack_require__(259);
 
 	module.exports = {
 	    BarChart: BarChart,
@@ -40891,7 +40917,7 @@
 	};
 
 /***/ },
-/* 263 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40899,20 +40925,20 @@
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
-	var Chart = __webpack_require__(264);
-	var Axis = __webpack_require__(265);
-	var Bar = __webpack_require__(266);
-	var Tooltip = __webpack_require__(267);
+	var Chart = __webpack_require__(262);
+	var Axis = __webpack_require__(263);
+	var Bar = __webpack_require__(264);
+	var Tooltip = __webpack_require__(265);
 
-	var DefaultPropsMixin = __webpack_require__(268);
-	var HeightWidthMixin = __webpack_require__(269);
-	var ArrayifyMixin = __webpack_require__(270);
-	var StackAccessorMixin = __webpack_require__(271);
-	var StackDataMixin = __webpack_require__(272);
-	var DefaultScalesMixin = __webpack_require__(273);
-	var TooltipMixin = __webpack_require__(274);
+	var DefaultPropsMixin = __webpack_require__(266);
+	var HeightWidthMixin = __webpack_require__(267);
+	var ArrayifyMixin = __webpack_require__(268);
+	var StackAccessorMixin = __webpack_require__(269);
+	var StackDataMixin = __webpack_require__(270);
+	var DefaultScalesMixin = __webpack_require__(271);
+	var TooltipMixin = __webpack_require__(272);
 
 	var DataSet = React.createClass({
 		displayName: "DataSet",
@@ -41091,7 +41117,7 @@
 	module.exports = BarChart;
 
 /***/ },
-/* 264 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -41136,13 +41162,13 @@
 	module.exports = Chart;
 
 /***/ },
-/* 265 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
 	var Axis = React.createClass({
 	    displayName: "Axis",
@@ -41324,13 +41350,13 @@
 	module.exports = Axis;
 
 /***/ },
-/* 266 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
 	var Bar = React.createClass({
 	    displayName: "Bar",
@@ -41377,13 +41403,13 @@
 	module.exports = Bar;
 
 /***/ },
-/* 267 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
 	var Tooltip = React.createClass({
 	    displayName: "Tooltip",
@@ -41432,13 +41458,13 @@
 	module.exports = Tooltip;
 
 /***/ },
-/* 268 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
 	var DefaultPropsMixin = {
 	    propTypes: {
@@ -41470,7 +41496,7 @@
 	module.exports = DefaultPropsMixin;
 
 /***/ },
-/* 269 */
+/* 267 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -41497,7 +41523,7 @@
 	module.exports = HeightWidthMixin;
 
 /***/ },
-/* 270 */
+/* 268 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -41528,7 +41554,7 @@
 	module.exports = ArrayifyMixin;
 
 /***/ },
-/* 271 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -41568,13 +41594,13 @@
 	module.exports = StackAccessorMixin;
 
 /***/ },
-/* 272 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
 	var StackDataMixin = {
 	    propTypes: {
@@ -41612,7 +41638,7 @@
 	module.exports = StackDataMixin;
 
 /***/ },
-/* 273 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -41620,7 +41646,7 @@
 	var _slicedToArray = function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { var _arr = []; for (var _iterator = arr[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) { _arr.push(_step.value); if (i && _arr.length === i) break; } return _arr; } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } };
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
 	var DefaultScalesMixin = {
 	    propTypes: {
@@ -41801,7 +41827,7 @@
 	module.exports = DefaultScalesMixin;
 
 /***/ },
-/* 274 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -41809,8 +41835,8 @@
 	var _slicedToArray = function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { var _arr = []; for (var _iterator = arr[Symbol.iterator](), _step; !(_step = _iterator.next()).done;) { _arr.push(_step.value); if (i && _arr.length === i) break; } return _arr; } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } };
 
 	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(275);
-	var d3 = __webpack_require__(261);
+	var ReactDOM = __webpack_require__(273);
+	var d3 = __webpack_require__(259);
 
 	var TooltipMixin = {
 	    propTypes: {
@@ -41932,7 +41958,7 @@
 	module.exports = TooltipMixin;
 
 /***/ },
-/* 275 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41941,26 +41967,26 @@
 
 
 /***/ },
-/* 276 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
-	var Chart = __webpack_require__(264);
-	var Axis = __webpack_require__(265);
-	var Bar = __webpack_require__(266);
-	var Tooltip = __webpack_require__(267);
+	var Chart = __webpack_require__(262);
+	var Axis = __webpack_require__(263);
+	var Bar = __webpack_require__(264);
+	var Tooltip = __webpack_require__(265);
 
-	var DefaultPropsMixin = __webpack_require__(268);
-	var HeightWidthMixin = __webpack_require__(269);
-	var ArrayifyMixin = __webpack_require__(270);
-	var StackAccessorMixin = __webpack_require__(271);
-	var StackDataMixin = __webpack_require__(272);
-	var DefaultScalesMixin = __webpack_require__(273);
-	var TooltipMixin = __webpack_require__(274);
+	var DefaultPropsMixin = __webpack_require__(266);
+	var HeightWidthMixin = __webpack_require__(267);
+	var ArrayifyMixin = __webpack_require__(268);
+	var StackAccessorMixin = __webpack_require__(269);
+	var StackDataMixin = __webpack_require__(270);
+	var DefaultScalesMixin = __webpack_require__(271);
+	var TooltipMixin = __webpack_require__(272);
 
 	// receive array and return a subsampled array of size n
 	//
@@ -42129,21 +42155,21 @@
 	module.exports = Waveform;
 
 /***/ },
-/* 277 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
-	var Chart = __webpack_require__(264);
-	var Tooltip = __webpack_require__(267);
+	var Chart = __webpack_require__(262);
+	var Tooltip = __webpack_require__(265);
 
-	var DefaultPropsMixin = __webpack_require__(268);
-	var HeightWidthMixin = __webpack_require__(269);
-	var AccessorMixin = __webpack_require__(278);
-	var TooltipMixin = __webpack_require__(274);
+	var DefaultPropsMixin = __webpack_require__(266);
+	var HeightWidthMixin = __webpack_require__(267);
+	var AccessorMixin = __webpack_require__(276);
+	var TooltipMixin = __webpack_require__(272);
 
 	var Wedge = React.createClass({
 		displayName: "Wedge",
@@ -42378,7 +42404,7 @@
 	module.exports = PieChart;
 
 /***/ },
-/* 278 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42418,7 +42444,7 @@
 	module.exports = AccessorMixin;
 
 /***/ },
-/* 279 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42426,18 +42452,18 @@
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
-	var Chart = __webpack_require__(264);
-	var Axis = __webpack_require__(265);
-	var Tooltip = __webpack_require__(267);
+	var Chart = __webpack_require__(262);
+	var Axis = __webpack_require__(263);
+	var Tooltip = __webpack_require__(265);
 
-	var DefaultPropsMixin = __webpack_require__(268);
-	var HeightWidthMixin = __webpack_require__(269);
-	var ArrayifyMixin = __webpack_require__(270);
-	var AccessorMixin = __webpack_require__(278);
-	var DefaultScalesMixin = __webpack_require__(273);
-	var TooltipMixin = __webpack_require__(274);
+	var DefaultPropsMixin = __webpack_require__(266);
+	var HeightWidthMixin = __webpack_require__(267);
+	var ArrayifyMixin = __webpack_require__(268);
+	var AccessorMixin = __webpack_require__(276);
+	var DefaultScalesMixin = __webpack_require__(271);
+	var TooltipMixin = __webpack_require__(272);
 
 	var DataSet = React.createClass({
 		displayName: "DataSet",
@@ -42595,7 +42621,7 @@
 	module.exports = ScatterPlot;
 
 /***/ },
-/* 280 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42603,19 +42629,19 @@
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
-	var Chart = __webpack_require__(264);
-	var Axis = __webpack_require__(265);
-	var Path = __webpack_require__(281);
-	var Tooltip = __webpack_require__(267);
+	var Chart = __webpack_require__(262);
+	var Axis = __webpack_require__(263);
+	var Path = __webpack_require__(279);
+	var Tooltip = __webpack_require__(265);
 
-	var DefaultPropsMixin = __webpack_require__(268);
-	var HeightWidthMixin = __webpack_require__(269);
-	var ArrayifyMixin = __webpack_require__(270);
-	var AccessorMixin = __webpack_require__(278);
-	var DefaultScalesMixin = __webpack_require__(273);
-	var TooltipMixin = __webpack_require__(274);
+	var DefaultPropsMixin = __webpack_require__(266);
+	var HeightWidthMixin = __webpack_require__(267);
+	var ArrayifyMixin = __webpack_require__(268);
+	var AccessorMixin = __webpack_require__(276);
+	var DefaultScalesMixin = __webpack_require__(271);
+	var TooltipMixin = __webpack_require__(272);
 
 	var DataSet = React.createClass({
 		displayName: "DataSet",
@@ -42907,13 +42933,13 @@
 	module.exports = LineChart;
 
 /***/ },
-/* 281 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
 	var Path = React.createClass({
 	    displayName: "Path",
@@ -42975,7 +43001,7 @@
 	module.exports = Path;
 
 /***/ },
-/* 282 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42983,20 +43009,20 @@
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var d3 = __webpack_require__(261);
+	var d3 = __webpack_require__(259);
 
-	var Chart = __webpack_require__(264);
-	var Axis = __webpack_require__(265);
-	var Path = __webpack_require__(281);
-	var Tooltip = __webpack_require__(267);
+	var Chart = __webpack_require__(262);
+	var Axis = __webpack_require__(263);
+	var Path = __webpack_require__(279);
+	var Tooltip = __webpack_require__(265);
 
-	var DefaultPropsMixin = __webpack_require__(268);
-	var HeightWidthMixin = __webpack_require__(269);
-	var ArrayifyMixin = __webpack_require__(270);
-	var StackAccessorMixin = __webpack_require__(271);
-	var StackDataMixin = __webpack_require__(272);
-	var DefaultScalesMixin = __webpack_require__(273);
-	var TooltipMixin = __webpack_require__(274);
+	var DefaultPropsMixin = __webpack_require__(266);
+	var HeightWidthMixin = __webpack_require__(267);
+	var ArrayifyMixin = __webpack_require__(268);
+	var StackAccessorMixin = __webpack_require__(269);
+	var StackDataMixin = __webpack_require__(270);
+	var DefaultScalesMixin = __webpack_require__(271);
+	var TooltipMixin = __webpack_require__(272);
 
 	var DataSet = React.createClass({
 		displayName: "DataSet",
@@ -43196,7 +43222,7 @@
 	module.exports = AreaChart;
 
 /***/ },
-/* 283 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -43204,13 +43230,13 @@
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(275);
-	var d3 = __webpack_require__(261);
+	var ReactDOM = __webpack_require__(273);
+	var d3 = __webpack_require__(259);
 
-	var Chart = __webpack_require__(264);
-	var Axis = __webpack_require__(265);
+	var Chart = __webpack_require__(262);
+	var Axis = __webpack_require__(263);
 
-	var HeightWidthMixin = __webpack_require__(269);
+	var HeightWidthMixin = __webpack_require__(267);
 
 	// Adapted for React from https://github.com/mbostock/d3/blob/master/src/svg/brush.js
 	// TODO: Add D3 License
@@ -43528,7 +43554,7 @@
 	module.exports = Brush;
 
 /***/ },
-/* 284 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -12,7 +12,7 @@ var Attendance = React.createClass({
 	render() {
 		return (
 			<div>
-				<h2>Attendance - {this.props.audience.length}</h2>
+				<h4>Attendance - {this.props.audience.length}</h4>
 				<table className="table table-striped">
 					<thead>
 						<tr>
