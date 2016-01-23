@@ -2,7 +2,7 @@ var express = require('express');
 var _ = require('underscore');
 var app = express();
 var connections = [];
-var title = 'Untitled Presentation';
+var title = '';
 var audience = [];
 var speaker = {};
 var questions = require('./app-questions');
@@ -22,7 +22,7 @@ io.sockets.on('connection', function (socket) {
 		} else if (this.id === speaker.id) {
 			console.log("%s has left. '%s' is over.", speaker.name, title);
 			speaker = {};
-			title = "Untitled Presentation";
+			title = "Real-time Video Chat XPage Application Using Websocket and WebRTC Technologies";
 			io.sockets.emit('end', {title: title, speaker: ''});
 		}
 		connections.splice(connections.indexOf(socket), 1);
