@@ -1,11 +1,4 @@
 module.exports = [
-    {
-      "q": "test question",
-      "1": "1",
-      "2": "4",
-      "3": "3",
-      "5": "5"
-  },
    {
       "q": "Which was your favorite Harry Potter ride?",
       "FB Journey": "Harry Potter and the Forbidden Journey",
