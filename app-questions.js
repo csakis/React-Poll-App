@@ -1,4 +1,12 @@
 module.exports = [
+   {
+      "q": "Which was your favorite Harry Potter ride?",
+      "FB Journey": "Harry Potter and the Forbidden Journey",
+      "Dragon": "Dragon Challenge",
+      "Hippogriff": "Flight of the Hippogriff",
+      "Spirit Rally": "Triwizard Spirit Rally",
+      "Frog Choir": "Frog Choir"
+  },
   {
       "q": "What do you do?\n I am a ...",
       "Developer": "developer",
