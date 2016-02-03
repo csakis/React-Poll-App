@@ -8,6 +8,13 @@ module.exports = [
       "Frog Choir": "Frog Choir"
   },
   {
+    "q": "Super Bowl 50",
+    "Denver Broncos": "Denver Broncos",
+    "Carolina Panthers": "Carolina Panthers",
+    "Commercials": "I only watch the commercials",
+    "Huh?": "Super what??"
+  },
+  {
       "q": "What do you do?\n I am a ...",
       "Developer": "developer",
       "Admin": "system administrator",
