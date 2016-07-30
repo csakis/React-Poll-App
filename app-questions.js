@@ -12,7 +12,7 @@ module.exports = [
       "q": "I develop mainly",
       "Notes": "Notes applications",
       "XPages": "XPage applications",
-      "Java": "Java applicaitons",
+      "Java": "Java applications",
       "Web": "other web applications",
       "Other": "something completely different"
 
