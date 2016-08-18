@@ -6,6 +6,12 @@ module.exports = [
       "3-4": "Between 3-4",
       ">=5": "Fifth or more"
   },
+   {
+      "q": "It's been 1026 days since Domino Designer 9.0.1 release?\nDo you think there will ever be an official update?",
+      "Optimist": "Of course, IBM loves us",
+      "Realist": "We might",
+      "Cynic": "When pigs fly."
+  },
   {
       "q": "What do you do?\n I am a ...",
       "Developer": "developer",
