@@ -22,7 +22,7 @@ io.sockets.on('connection', function (socket) {
 		} else if (this.id === speaker.id) {
 			console.log("%s has left. '%s' is over.", speaker.name, title);
 			speaker = {};
-			title = "Real-time Video Chat XPage Application Using Websocket and WebRTC Technologies";
+			title = "MWLUG2016 WebSocket Survey";
 			io.sockets.emit('end', {title: title, speaker: ''});
 		}
 		connections.splice(connections.indexOf(socket), 1);
