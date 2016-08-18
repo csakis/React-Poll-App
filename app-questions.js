@@ -7,7 +7,7 @@ module.exports = [
       ">=5": "Fifth or more"
   },
    {
-      "q": "It's been 1026 days since Domino Designer 9.0.1 release? \n Do you think there will ever be an official update?",
+      "q": "It's been 1026 days since Domino Designer 9.0.1 release?" + {"\n"} + "Do you think there will ever be an official update?",
       "Optimist": "Of course, IBM loves us",
       "Realist": "We might",
       "Cynic": "When pigs fly."
