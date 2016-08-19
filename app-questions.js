@@ -7,6 +7,16 @@ module.exports = [
       ">=5": "Fifth or more"
   },
    {
+      "q": "Favorite beer at Zilker brewing Co.?",
+      "Honey Blonde"
+      "Pale Ale": "Pale Ale",
+      "Session IPA": "Session IPA",
+      "Brutus IPA": "Brutus IPA",
+      "Marco IPA": "Marco IPA",
+      "Coffee stout": "Coffee stout",
+      "No drink": "I don't drink"
+  },
+   {
       "q": "It's been 1026 days since Domino Designer 9.0.1 release? Do you think there will ever be an official update?",
       "Optimist": "Of course, IBM loves us",
       "Realist": "We might",
@@ -36,12 +46,5 @@ module.exports = [
         "no plans": "I heard about it, but have no plans to use it.",
         "would be nice": "I would like to use it in my apps.",
         "using it": "I use it already in my apps."
-    },
-    {
-      "q": "Are you familiar with WebRTC technology?",
-      "never": "I have never heard of it.",
-      "no Plans": "I heard about it, but no plans to use it.",
-      "would be nice": "I would like to use it in my apps.",
-      "using it": "I use it already in my apps."
     }
 ];
